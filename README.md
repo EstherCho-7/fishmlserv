@@ -14,3 +14,13 @@ $ uvicorn src.fishmlserv.main:app --reload
 ```bash
 $ uvicorn src.fishmlserv.main:app --host 0.0.0.0 --port 8765 
 ```
+
+### Docker
+```bash
+$ sudo docker images   # Check images
+$ sudo docker run -d --name fmlserv-042 -p 8877:8765 fishmlserv:0.4.2  # Run Docker
+$ sudo docker ps   # Check Container
+```
+
+### Ref
+- https://curlconverter.com/python
