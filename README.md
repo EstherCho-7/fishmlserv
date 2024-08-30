@@ -12,5 +12,5 @@ $ uvicorn src.fishmlserv.main:app --reload
 
 - prd
 ```bash
-$ uvicorn src.fishmlserv.main:app --host 0.0.0.0 --port 8949
+$ uvicorn src.fishmlserv.main:app --host 0.0.0.0 --port 8765 
 ```
