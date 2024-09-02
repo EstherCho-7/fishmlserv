@@ -51,4 +51,4 @@ def fish(length: float, weight: float):
 def test():
     from src.fishmlserv.model.manager import get_model_path
     model_path=get_model_path()
-    return {"model_path": model_path}
+    return model_path
