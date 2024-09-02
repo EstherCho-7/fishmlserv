@@ -29,17 +29,20 @@ def fish(length: float, weight: float):
 #    else:
 #        prediction="빙어"
 
-    with open("/home/esthercho/code/fishmlserv/note/model.pkl", "rb") as file:
-        fish_model=pickle.load(file)
+#    with open("/home/esthercho/code/fishmlserv/note/model.pkl", "rb") as file:
+#        fish_model=pickle.load(file)
 
-    prediction=fish_model.predict([[length, weight]])
+#    prediction=fish_model.predict([[length, weight]])
 
-    fish_class="빙어"
-    if prediction[0]==1:
-        fish_class="도미"
+    fish_class="몰라"
+#    if prediction[0]==1:
+#        fish_class="도미"
+#    else:
+#       fish_class="빙어"
+
 
     return {
-            "prediction": prediction,
+            "prediction": fish_class,
             "length":length,
             "weight":weight
             }
