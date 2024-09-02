@@ -24,6 +24,12 @@ $ sudo docker ps   # Check Container
 
 # Into Docker Container
 $ sudo docker exec -it fml043 bash
+
+# exit
+$ exit
+
+# log 확인
+$ sudo docker logs -f <container ID | Name>
 ```
 
 ### Fly.io
