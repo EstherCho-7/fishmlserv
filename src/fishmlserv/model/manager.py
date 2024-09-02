@@ -8,7 +8,7 @@ def get_model_path():
     
     this_file_path=os.path.abspath(__file__)
     this_dir=os.path.dirname(this_file_path)
-    rel_path=os.path.expanduser('~/code/fishmlserv/src/fishmlserv/model/'. 'model.pkl')
+    rel_path=os.path.expanduser('~/code/fishmlserv/src/fishmlserv/model/', 'model.pkl')
     model_path=os.path.abspath(rel_path)
 
     return f"{model_path}"
