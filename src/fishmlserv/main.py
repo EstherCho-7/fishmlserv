@@ -46,3 +46,8 @@ def fish(length: float, weight: float):
             "length":length,
             "weight":weight
             }
+
+@app.get("/")
+def test():
+    from fishmlserv.model.manager import get_model_path
+    return "wanna go home"
