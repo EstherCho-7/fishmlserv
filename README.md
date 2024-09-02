@@ -22,5 +22,14 @@ $ sudo docker run -d --name fmlserv-042 -p 8877:8765 fishmlserv:0.4.2  # Run Doc
 $ sudo docker ps   # Check Container
 ```
 
+### Fly.io
+```bash
+# Launch
+$ flyctl launch --name esther-fishmlserv
+
+# Deploy
+$ flyctl deploy
+```
+
 ### Ref
 - https://curlconverter.com/python
