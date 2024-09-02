@@ -1,5 +1,6 @@
 from typing import Union
 from fastapi import FastAPI
+import pickle
 
 app = FastAPI()
 
@@ -36,6 +37,7 @@ def fish(length: float, weight: float):
     fish_class="빙어"
     if prediction[0]==1:
         fish_class="도미"
+
     return {
             "prediction": prediction,
             "length":length,
