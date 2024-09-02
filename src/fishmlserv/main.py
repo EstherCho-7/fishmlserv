@@ -49,6 +49,6 @@ def fish(length: float, weight: float):
 
 @app.get("/test")
 def test():
-    from src.fishmlserv.model.manager import get_model_path
+    from fishmlserv.model.manager import get_model_path
     model_path=get_model_path()
     return {"model_path": model_path}

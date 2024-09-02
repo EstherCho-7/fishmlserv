@@ -10,6 +10,8 @@ def get_model_path():
     this_dir=os.path.dirname(this_file_path)
     rel_path=os.path.expanduser('~/code/fishmlserv/src/fishmlserv/model')
     join_path=os.path.join(rel_path, 'model.pkl')
-    model_path=os.path.abspath(join_path)
+    with open(join_path, "rb") as file:  # 추가
+        fish_model=pickle.load(file)     # 추가
+#    model_path=os.path.abspath(join_path)
 
-    return f"{model_path}"
+    return fish_model 
