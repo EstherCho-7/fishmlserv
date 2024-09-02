@@ -1,5 +1,6 @@
 def get_model_path():
     import os
+    import pickle
     #  이 함수 파일의 절대 경로 받아오기
     # 절대 경로를 이용해 model.pkl의 경로를 조합
     # 조합된 경로를 리턴 = 끝
