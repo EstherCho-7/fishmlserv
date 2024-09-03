@@ -49,13 +49,15 @@ $ sudo docker exec -it f084 prediction-t -l <length> -w <weight>
 # for typer
 $ prediction-t --help
 ```
-![image](https://github.com/user-attachments/assets/2355054c-c061-4ee8-9c67-5eb60702cca6)
+![typer_help](https://github.com/user-attachments/assets/f7e703cb-ba50-43ac-9fff-0d4a71db8354)
+
 
 ```bash
 # for fire
 $ prediction-f --help
 ```
-![image](https://github.com/user-attachments/assets/21bd850a-b73a-4e01-a695-75900d19abe6)
+![fire_help](https://github.com/user-attachments/assets/d149e90c-810a-4678-847f-4c65e718e3a8)
+
 
 
 ### Fly.io
