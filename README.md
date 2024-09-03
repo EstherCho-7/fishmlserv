@@ -44,6 +44,20 @@ $ sudo docker exec -it f084 prediction-f -l <length> -w <weight>
 $ sudo docker exec -it f084 prediction-t -l <length> -w <weight>
 ```
 
+#### prediction_help
+```bash
+# for typer
+$ prediction-t --help
+```
+![image](https://github.com/user-attachments/assets/2355054c-c061-4ee8-9c67-5eb60702cca6)
+
+```bash
+# for fire
+$ prediction-f --help
+```
+![image](https://github.com/user-attachments/assets/21bd850a-b73a-4e01-a695-75900d19abe6)
+
+
 ### Fly.io
 ```bash
 # Launch
