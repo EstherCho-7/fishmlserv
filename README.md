@@ -32,6 +32,18 @@ $ exit
 $ sudo docker logs -f <container ID | Name>
 ```
 
+### Command
+```bash
+# get model path
+$ sudo docker exec -it f084 get-model-path
+
+# prediction by fire
+$ sudo docker exec -it f084 prediction-f -l <length> -w <weight>
+
+# prediction by typer
+$ sudo docker exec -it f084 prediction-t -l <length> -w <weight>
+```
+
 ### Fly.io
 ```bash
 # Launch
