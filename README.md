@@ -32,6 +32,9 @@ $ exit
 $ sudo docker logs -f <container ID | Name>
 ```
 
+### Docker Hub
+- https://hub.docker.com/repository/docker/esthercho7/isdomi/general
+
 ### Command
 ```bash
 # get model path
