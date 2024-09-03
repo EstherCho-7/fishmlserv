@@ -1,6 +1,6 @@
 [project]
 name = "fishmlserv"
-version = "0.8.0"
+version = "0.8.3"
 description = "Serving Machine Learning Model - using sklearn(KNeighborsClassifier), using FastApi, Fly.io"
 authors = [
     {name = "EstherCho-7", email = "dkgkqm777@gmail.com"},
@@ -17,6 +17,7 @@ license = {text = "MIT"}
 
 [project.scripts]
 get-model-path="fishmlserv.cli:call_path"
+prediction="fishmlserv.cli_fire:main"
 
 [tool.pdm]
 distribution = false
