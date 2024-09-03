@@ -3,6 +3,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from fishmlserv.model.manager import get_model_path
 import pickle
 
+app=typer.Typer()
+
+@app.command()
 def prediction(length: float = typer.Option(..., "-l", "--length", help="Length of the fish"), weight: float = typer.Option(..., "-w", "--weight", help="Weight of the fish")):
     model_path=get_model_path()
     with open(model_path, 'rb') as f:
@@ -14,6 +17,7 @@ def prediction(length: float = typer.Option(..., "-l", "--length", help="Length 
     print(mapped_prediction)
     return mapped_prediction
 
+@app.command()
 def main():
     typer.run(prediction)
 
