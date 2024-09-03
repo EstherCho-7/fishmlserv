@@ -1,5 +1,5 @@
 import fire
-from sklearn.neighbors import KNeighborsClassifier
+#from sklearn.neighbors import KNeighborsClassifier
 from fishmlserv.model.manager import get_model_path
 import pickle
 
