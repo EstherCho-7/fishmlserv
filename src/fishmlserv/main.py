@@ -38,10 +38,10 @@ def fish(length: float, weight: float):
     with open(model_path, 'rb') as f:
         fish_model=pickle.load(f)
 
-    fish_class=fish_model.predict([[length, weight]])
-    fish_name="몰라"
+    prediction=fish_model.predict([[length, weight]])
+    
 
-    if fish_class==0:
+    if prediction[0]==1:
         fish_name="도미"
     else:
         fish_name="빙어"
