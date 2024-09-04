@@ -5,6 +5,10 @@ from fishmlserv.model.manager import get_model_path
 
 app = FastAPI()
 
+model_path=get_model_path()
+with open(model_path, 'rb') as f:
+        fish_model=pickle.load(f)
+
 @app.get("/")
 def read_root():
     return {"Hello":"World"}
@@ -25,19 +29,6 @@ def fish(length: float, weight: float):
     Returns:
         dict: 물고기 종류를 담은 딕셔너리
     """
-#    if length > 30.0:
-#        prediction="도미"
-#    else:
-#        prediction="빙어"
-
-#    with open("/home/esthercho/code/fishmlserv/note/model.pkl", "rb") as file:
-#        fish_model=pickle.load(file)
-
-#    prediction=fish_model.predict([[length, weight]])
-    model_path=get_model_path()
-    with open(model_path, 'rb') as f:
-        fish_model=pickle.load(f)
-
     prediction=fish_model.predict([[length, weight]])
     
 
@@ -45,10 +36,6 @@ def fish(length: float, weight: float):
         fish_name="도미"
     else:
         fish_name="빙어"
-#    if prediction[0]==1:
-#        fish_class="도미"
-#    else:
-#       fish_class="빙어"
 
 
     return {
@@ -57,8 +44,3 @@ def fish(length: float, weight: float):
             "weight":weight
             }
 
-#@app.get("/test")
-#def test():
-#    from src.fishmlserv.model.manager import get_model_path
-#    model_path=get_model_path()
-#    return model_path
