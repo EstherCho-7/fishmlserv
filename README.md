@@ -17,19 +17,19 @@ $ uvicorn src.fishmlserv.main:app --host 0.0.0.0 --port 8765
 
 ### Docker
 ```bash
-$ sudo docker images   # Check images
-$ sudo docker build -t fishmlserv:0.4.X .   # build image
-$ sudo docker run -d --name fmlserv-042 -p 8877:8765 fishmlserv:0.4.2  # Run Docker
-$ sudo docker ps   # Check Container
+$ docker images   # Check images
+$ docker build -t fishmlserv:0.4.X .   # build image
+$ docker run -d --name fmlserv-042 -p 8877:8765 fishmlserv:0.4.2  # Run Docker
+$ docker ps   # Check Container
 
 # Into Docker Container
-$ sudo docker exec -it fml043 bash
+$ docker exec -it fml043 bash
 
 # exit
 $ exit
 
 # log 확인
-$ sudo docker logs -f <container ID | Name>
+$ docker logs -f <container ID | Name>
 ```
 
 ### Docker Hub
@@ -38,13 +38,13 @@ $ sudo docker logs -f <container ID | Name>
 ### Command
 ```bash
 # get model path
-$ sudo docker exec -it f084 get-model-path
+$ docker exec -it f084 get-model-path
 
 # prediction by fire
-$ sudo docker exec -it f084 prediction-f -l <length> -w <weight>
+$ docker exec -it f084 prediction-f -l <length> -w <weight>
 
 # prediction by typer
-$ sudo docker exec -it f084 prediction-t -l <length> -w <weight>
+$ docker exec -it f084 prediction-t -l <length> -w <weight>
 ```
 
 #### prediction_help
@@ -62,6 +62,16 @@ $ prediction-f --help
 ![fire_help](https://github.com/user-attachments/assets/d149e90c-810a-4678-847f-4c65e718e3a8)
 
 
+### LB
+```bash
+$ docker build -t ml-lb:1.5.0 LB/
+$ docker run -d -p 8765:80 --link ml-1 --link ml-2 --name lb-2 ml-lb:1.5.0
+
+# Order
+$ docker run -d --name ml-1 fishmlserv:1.1.0
+$ sudo docker run -d --name ml-2 fishmlserv:1.1.0
+$ sudo docker run -d -p 8765:80 --link ml-1 --link ml-2 --name lb-2 ml-lb:1.5.0
+```
 
 ### Fly.io
 ```bash
